@@ -11,16 +11,10 @@ import { createContext, useContext, useState } from "react";
 export const userContext = createContext();
 
 export default function CustomerAgent() {
-    const [btn, setBtn] = useState(4);
     const [indexUser, setUser] = useState({});
-
-    const btnHandler = (value) => {
-        setBtn(value);
-    }
 
     const setIndexHandler = (value) => {
         setUser(value)
-        setBtn(4)
     }
 
     const index = indexUser
@@ -54,9 +48,11 @@ export default function CustomerAgent() {
                                         </Col>
                                         <Col md={6} lg={7} xl={8}>
                                             <Container fluid className=''>
-                                                <Menu btn={btn} onBtnChange={btnHandler} index={indexUser} />
+                                                <Menu index={indexUser} />
                                                 <hr />
-                                                <Outlet index={indexUser} />
+                                                <div style={{ height: '78vh', overflowY: 'auto' }}>
+                                                    <Outlet index={indexUser} />
+                                                </div>
                                             </Container>
                                         </Col>
                                     </Row>

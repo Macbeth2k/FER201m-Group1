@@ -207,7 +207,7 @@ const router = createBrowserRouter(
         },
         {
           path: '/customer-agent/:id/account',
-          element: <EditAccountDetail />
+          element: <EditCustomerAccount />
         },
       ]
     },
