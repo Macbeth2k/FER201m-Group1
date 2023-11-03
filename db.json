@@ -2,27 +2,41 @@
   "brands": [
     {
       "id": 1,
-      "name": "Yonex"
+      "name": "Yonex",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo-Yonex.svg/1280px-Logo-Yonex.svg.png",
+      "description" : "Celebrated for its innovation and performance, our badminton racket brand consistently delivers top-quality products. Elevate your game with our rackets, known for their power and precision, suitable for players of all levels."
     },
     {
       "id": 2,
-      "name": "Li-Ning"
+      "name": "Li-Ning",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/2/26/LiNing_Logo.svg",
+      "description" : "Celebrated for its innovation and performance, our badminton racket brand consistently delivers top-quality products. Elevate your game with our rackets, known for their power and precision, suitable for players of all levels."
+    
     },
     {
       "id": 3,
-      "name": "Victor"
+      "name": "Victor",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Victor.gif",
+      "description" : "Celebrated for its innovation and performance, our badminton racket brand consistently delivers top-quality products. Elevate your game with our rackets, known for their power and precision, suitable for players of all levels."
     },
     {
       "id": 4,
-      "name": "Kumpoo"
+      "name": "Kumpoo",
+      "thumbnail": "https://m.media-amazon.com/images/S/stores-image-uploads-eu-prod/4/AmazonStores/A1F83G8C2ARO7P/18517eb0ab081cc517346a55e7ac14de.w12500.h2501._SL5000_CR0%2C0%2C5000%2C1000_SX1500_.jpg",
+      "description" : "Celebrated for its innovation and performance, our badminton racket brand consistently delivers top-quality products. Elevate your game with our rackets, known for their power and precision, suitable for players of all levels."
+    
     },
     {
       "id": 5,
-      "name": "kawasaki"
+      "name": "kawasaki",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/0/00/Kawasaki-Logo.jpg",
+      "description" : "Celebrated for its innovation and performance, our badminton racket brand consistently delivers top-quality products. Elevate your game with our rackets, known for their power and precision, suitable for players of all levels."
     },
     {
       "id": 6,
-      "name": "Proace"
+      "name": "Proace",
+      "thumbnail": "https://2.bp.blogspot.com/-m-nGtvMJH_k/UaBtQXuqovI/AAAAAAAAEiE/RL7cGbVVP6Y/s1600/Proace.jpg",
+      "description" : "Celebrated for its innovation and performance, our badminton racket brand consistently delivers top-quality products. Elevate your game with our rackets, known for their power and precision, suitable for players of all levels."
     }
   ],
   "products": [
@@ -36,10 +50,12 @@
       "balance": "Even",
       "quantity": 50,
       "description": "A versatile badminton racket suitable for all levels of play.",
+      "sub_description": "Introducing our premium badminton racket, a versatile tool for players of all skill levels. Crafted with precision, this racket offers an exceptional combination of power and control, allowing you to dominate the court with ease. Its lightweight design and advanced technology make it a reliable choice for both casual and competitive players. Elevate your badminton game with our top-notch racket and experience unmatched performance on the court.",
       "brand": 1,
       "category": 1,
       "skill_lv": "Beginner",
-      "imgage": "https://i.imgur.com/YIy22Tg.jpg"
+      "thumbnail": "https://maxsports.ca/cdn/shop/collections/bad-category_edb875b3-dbaa-4698-997c-0a9f45010205.jpg?v=1662263823&width=750",
+      "image": "https://maxsports.ca/cdn/shop/files/all_nf-002a_281-1_png.webp?v=1694907188&width=360"
     },
     {
       "id": 2,
@@ -51,10 +67,12 @@
       "balance": "Head-Heavy",
       "quantity": 30,
       "description": "Designed for aggressive players who want extra power in their shots.",
+      "sub_description": "Introducing our premium badminton racket, a versatile tool for players of all skill levels. Crafted with precision, this racket offers an exceptional combination of power and control, allowing you to dominate the court with ease. Its lightweight design and advanced technology make it a reliable choice for both casual and competitive players. Elevate your badminton game with our top-notch racket and experience unmatched performance on the court.",
       "brand": 2,
       "category": 1,
       "skill_lv": "Intermediate",
-      "image": ""
+       "thumbnail": "https://maxsports.ca/cdn/shop/collections/bad-category_edb875b3-dbaa-4698-997c-0a9f45010205.jpg?v=1662263823&width=750",
+      "image": "https://maxsports.ca/cdn/shop/files/all_nf-800p_269-1_png.webp?v=1697475192&width=360"
     },
     {
       "id": 3,
@@ -66,10 +84,12 @@
       "balance": "Even",
       "quantity": 30,
       "description": "A versatile badminton racket suitable for men's singles play.",
+      "sub_description": "Introducing our premium badminton racket, a versatile tool for players of all skill levels. Crafted with precision, this racket offers an exceptional combination of power and control, allowing you to dominate the court with ease. Its lightweight design and advanced technology make it a reliable choice for both casual and competitive players. Elevate your badminton game with our top-notch racket and experience unmatched performance on the court.",
       "brand": 1,
       "category": 1,
       "skill_lv": "Advanced",
-      "image": ""
+       "thumbnail": "https://maxsports.ca/cdn/shop/collections/bad-category_edb875b3-dbaa-4698-997c-0a9f45010205.jpg?v=1662263823&width=750",
+      "image": "https://maxsports.ca/cdn/shop/files/all_nf-002f_004-1_png.webp?v=1694906791&width=360"
     },
     {
       "id": 4,
@@ -81,10 +101,12 @@
       "balance": "Head-Heavy",
       "quantity": 25,
       "description": "Designed for women's singles play, offering extra power.",
+      "sub_description": "Introducing our premium badminton racket, a versatile tool for players of all skill levels. Crafted with precision, this racket offers an exceptional combination of power and control, allowing you to dominate the court with ease. Its lightweight design and advanced technology make it a reliable choice for both casual and competitive players. Elevate your badminton game with our top-notch racket and experience unmatched performance on the court.",
       "brand": 2,
       "category": 2,
       "skill_lv": "Intermediate",
-      "image": ""
+       "thumbnail": "https://maxsports.ca/cdn/shop/collections/bad-category_edb875b3-dbaa-4698-997c-0a9f45010205.jpg?v=1662263823&width=750",
+      "image": "https://maxsports.ca/cdn/shop/files/all_nf-800p_269-1_png.webp?v=1697475192&width=360"
     },
     {
       "id": 5,
@@ -96,10 +118,12 @@
       "balance": "Head-Heavy",
       "quantity": 20,
       "description": "Ideal for doubles play, providing great power and control.",
+      "sub_description": "Introducing our premium badminton racket, a versatile tool for players of all skill levels. Crafted with precision, this racket offers an exceptional combination of power and control, allowing you to dominate the court with ease. Its lightweight design and advanced technology make it a reliable choice for both casual and competitive players. Elevate your badminton game with our top-notch racket and experience unmatched performance on the court.",
       "brand": 4,
       "category": 3,
       "skill_lv": "Advanced",
-      "image": ""
+       "thumbnail": "https://maxsports.ca/cdn/shop/collections/bad-category_edb875b3-dbaa-4698-997c-0a9f45010205.jpg?v=1662263823&width=750",
+      "image": "https://maxsports.ca/cdn/shop/files/all_nf-002f_004-1_png.webp?v=1694906791&width=360"
     },
     {
       "id": 6,
@@ -111,10 +135,12 @@
       "balance": "Even",
       "quantity": 35,
       "description": "An excellent choice for men's singles with an emphasis on control.",
+      "sub_description": "Introducing our premium badminton racket, a versatile tool for players of all skill levels. Crafted with precision, this racket offers an exceptional combination of power and control, allowing you to dominate the court with ease. Its lightweight design and advanced technology make it a reliable choice for both casual and competitive players. Elevate your badminton game with our top-notch racket and experience unmatched performance on the court.",
       "brand": 3,
       "category": 1,
       "skill_lv": "Intermediate",
-      "image": ""
+       "thumbnail": "https://maxsports.ca/cdn/shop/collections/bad-category_edb875b3-dbaa-4698-997c-0a9f45010205.jpg?v=1662263823&width=750",
+      "image": "https://maxsports.ca/cdn/shop/files/all_nf-800p_269-1_png.webp?v=1697475192&width=360"
     },
     {
       "id": 7,
@@ -126,10 +152,12 @@
       "balance": "Head-Heavy",
       "quantity": 28,
       "description": "A powerful racket suitable for women's singles play.",
+      "sub_description": "Introducing our premium badminton racket, a versatile tool for players of all skill levels. Crafted with precision, this racket offers an exceptional combination of power and control, allowing you to dominate the court with ease. Its lightweight design and advanced technology make it a reliable choice for both casual and competitive players. Elevate your badminton game with our top-notch racket and experience unmatched performance on the court.",
       "brand": 5,
       "category": 2,
       "skill_lv": "Intermediate",
-      "image": ""
+       "thumbnail": "https://maxsports.ca/cdn/shop/collections/bad-category_edb875b3-dbaa-4698-997c-0a9f45010205.jpg?v=1662263823&width=750",
+      "image": "https://maxsports.ca/cdn/shop/files/all_nf-800p_269-1_png.webp?v=1697475192&width=360"
     },
     {
       "id": 8,
@@ -141,10 +169,12 @@
       "balance": "Even",
       "quantity": 22,
       "description": "Perfect for doubles play, offering a balanced performance.",
+      "sub_description": "Introducing our premium badminton racket, a versatile tool for players of all skill levels. Crafted with precision, this racket offers an exceptional combination of power and control, allowing you to dominate the court with ease. Its lightweight design and advanced technology make it a reliable choice for both casual and competitive players. Elevate your badminton game with our top-notch racket and experience unmatched performance on the court.",
       "brand": 6,
       "category": 3,
       "skill_lv": "Intermediate",
-      "image": ""
+       "thumbnail": "https://maxsports.ca/cdn/shop/collections/bad-category_edb875b3-dbaa-4698-997c-0a9f45010205.jpg?v=1662263823&width=750",
+      "image": "https://maxsports.ca/cdn/shop/files/all_nf-800p_269-1_png.webp?v=1697475192&width=360"
     },
     {
       "id": 9,
@@ -156,10 +186,12 @@
       "balance": "Head-Heavy",
       "quantity": 18,
       "description": "A high-performance racket for aggressive players.",
+      "sub_description": "Introducing our premium badminton racket, a versatile tool for players of all skill levels. Crafted with precision, this racket offers an exceptional combination of power and control, allowing you to dominate the court with ease. Its lightweight design and advanced technology make it a reliable choice for both casual and competitive players. Elevate your badminton game with our top-notch racket and experience unmatched performance on the court.",
       "brand": 1,
       "category": 1,
       "skill_lv": "Advanced",
-      "image": ""
+       "thumbnail": "https://maxsports.ca/cdn/shop/collections/bad-category_edb875b3-dbaa-4698-997c-0a9f45010205.jpg?v=1662263823&width=750",
+      "image": "https://maxsports.ca/cdn/shop/files/all_nf-002f_004-1_png.webp?v=1694906791&width=360"
     },
     {
       "id": 10,
@@ -171,10 +203,12 @@
       "balance": "Even",
       "quantity": 24,
       "description": "Ideal for players who value speed and control.",
+      "sub_description": "Introducing our premium badminton racket, a versatile tool for players of all skill levels. Crafted with precision, this racket offers an exceptional combination of power and control, allowing you to dominate the court with ease. Its lightweight design and advanced technology make it a reliable choice for both casual and competitive players. Elevate your badminton game with our top-notch racket and experience unmatched performance on the court.",
       "brand": 2,
       "category": 1,
       "skill_lv": "Intermediate",
-      "image": ""
+       "thumbnail": "https://maxsports.ca/cdn/shop/collections/bad-category_edb875b3-dbaa-4698-997c-0a9f45010205.jpg?v=1662263823&width=750",
+      "image": "https://maxsports.ca/cdn/shop/files/all_nf-800p_269-1_png.webp?v=1697475192&width=360"
     },
     {
       "id": 11,
@@ -186,10 +220,12 @@
       "balance": "Even",
       "quantity": 27,
       "description": "A balanced racket suitable for both singles and doubles play.",
+      "sub_description": "Introducing our premium badminton racket, a versatile tool for players of all skill levels. Crafted with precision, this racket offers an exceptional combination of power and control, allowing you to dominate the court with ease. Its lightweight design and advanced technology make it a reliable choice for both casual and competitive players. Elevate your badminton game with our top-notch racket and experience unmatched performance on the court.",
       "brand": 3,
       "category": 1,
       "skill_lv": "Intermediate",
-      "image": ""
+       "thumbnail": "https://maxsports.ca/cdn/shop/collections/bad-category_edb875b3-dbaa-4698-997c-0a9f45010205.jpg?v=1662263823&width=750",
+      "image": "https://maxsports.ca/cdn/shop/files/all_nf-002f_004-1_png.webp?v=1694906791&width=360"
     },
     {
       "id": 12,
@@ -201,10 +237,12 @@
       "balance": "Head-Heavy",
       "quantity": 22,
       "description": "A versatile racket for powerful shots and control.",
+      "sub_description": "Introducing our premium badminton racket, a versatile tool for players of all skill levels. Crafted with precision, this racket offers an exceptional combination of power and control, allowing you to dominate the court with ease. Its lightweight design and advanced technology make it a reliable choice for both casual and competitive players. Elevate your badminton game with our top-notch racket and experience unmatched performance on the court.",
       "brand": 5,
       "category": 1,
       "skill_lv": "Intermediate",
-      "image": ""
+       "thumbnail": "https://maxsports.ca/cdn/shop/collections/bad-category_edb875b3-dbaa-4698-997c-0a9f45010205.jpg?v=1662263823&width=750",
+      "image": "https://maxsports.ca/cdn/shop/files/all_nf-800p_269-1_png.webp?v=1697475192&width=360"
     },
     {
       "id": 13,
@@ -216,10 +254,12 @@
       "balance": "Even",
       "quantity": 19,
       "description": "A dual-sided racket designed for exceptional versatility on the court.",
+      "sub_description": "Introducing our premium badminton racket, a versatile tool for players of all skill levels. Crafted with precision, this racket offers an exceptional combination of power and control, allowing you to dominate the court with ease. Its lightweight design and advanced technology make it a reliable choice for both casual and competitive players. Elevate your badminton game with our top-notch racket and experience unmatched performance on the court.",
       "brand": 1,
       "category": 2,
       "skill_lv": "Advanced",
-      "image": ""
+       "thumbnail": "https://maxsports.ca/cdn/shop/collections/bad-category_edb875b3-dbaa-4698-997c-0a9f45010205.jpg?v=1662263823&width=750",
+      "image": "https://maxsports.ca/cdn/shop/files/all_nf-800p_269-1_png.webp?v=1697475192&width=360"
     },
     {
       "id": 14,
@@ -231,24 +271,33 @@
       "balance": "Even",
       "quantity": 26,
       "description": "A versatile and reliable racket for players of all levels.",
+      "sub_description": "Introducing our premium badminton racket, a versatile tool for players of all skill levels. Crafted with precision, this racket offers an exceptional combination of power and control, allowing you to dominate the court with ease. Its lightweight design and advanced technology make it a reliable choice for both casual and competitive players. Elevate your badminton game with our top-notch racket and experience unmatched performance on the court.",
       "brand": 6,
       "category": 3,
       "skill_lv": "Intermediate",
-      "image": ""
+       "thumbnail": "https://maxsports.ca/cdn/shop/collections/bad-category_edb875b3-dbaa-4698-997c-0a9f45010205.jpg?v=1662263823&width=750",
+      "image": "https://maxsports.ca/cdn/shop/files/all_nf-002f_004-1_png.webp?v=1694906791&width=360"
     }
   ],
   "categories": [
     {
       "id": 1,
-      "name": "men-single"
+      "name": "men-single",
+      "thumbnail": "https://img.freepik.com/premium-vector/play-badminton-poster-with-single-player-with-badminton-racket-flying-shuttlecock_654325-325.jpg?w=740",
+      "description": "Unleash power and precision with our men's badminton racket. Lightweight and high-performing, it's the choice for players seeking control and speed on the court"
     },
-    {
+      {
       "id": 2,
-      "name": "women-single"
+      "name": "women-single",
+      "thumbnail": "https://img.freepik.com/premium-vector/singles-badminton-game-illustration-with-woman-swinging-her-racket-beat-off-shuttlecock_654325-316.jpg?w=740",
+      "description": "Elevate your game with our women's badminton racket. Designed for agility and control, this lightweight racket is perfect for female players seeking precision and finesse on the court."
     },
     {
       "id": 3,
-      "name": "doubles"
+      "name": "doubles",
+      "thumbnail": "https://img.freepik.com/free-vector/badminton-concept-illustration_114360-6787.jpg?w=740&t=st=1698985890~exp=1698986490~hmac=d83bb6ab55247ccdf9830e5110de77f19f73f3f0b54d65329dd679fffc2ac2a3",
+      "description": "Enhance your doubles play with our specially crafted doubles badminton racket. It's designed for precision and teamwork, making it your winning choice on the court."
+   
     }
   ],
   "accounts": [
@@ -626,6 +675,46 @@
       "valid_customers": [
         2
       ]
+    }
+  ],
+  "hot_products": [
+    {
+      "id": 3
+    },
+    {
+      "id": 6
+    },
+    {
+      "id": 9
+    },
+    {
+      "id": 13
+    },
+    {
+      "id": 16
+    },
+    {
+      "id": 19
+    }
+  ],
+  "new_products": [
+    {
+      "id": 3
+    },
+    {
+      "id": 6
+    },
+    {
+      "id": 9
+    },
+    {
+      "id": 13
+    },
+    {
+      "id": 16
+    },
+    {
+      "id": 19
     }
   ]
 }
