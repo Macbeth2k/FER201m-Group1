@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
-import Search from '../components/Search';
-import SideBarItem from './SideBarItem';
-import ProfileCustomerAgent from './ProfileCustomerAgent';
+import Search from '../components/CA_Search';
+import SideBarItem from './CA_SideBarItem';
 import ListGroup from 'react-bootstrap/ListGroup';
 export default function Sidebar(props) {
     const [users, setUsers] = useState([])
@@ -28,10 +27,8 @@ export default function Sidebar(props) {
         return user.fname.toLowerCase().includes(search.toLowerCase()) || user.lname.toLowerCase().includes(search.toLowerCase());
     });
 
-    console.log(listUserBySearch)
-
     return (
-        <div className='p-3'>
+        <div className='p-3' style={{paddingBottom: '0'}}>
             <div className='me-3'>
                 <Search listen={searchHandler} />
             </div>
@@ -43,21 +40,7 @@ export default function Sidebar(props) {
 
                 </ListGroup>
             </div>
-            <hr style={{marginBottom: '5px'}}/>
-            <div>
-                <ProfileCustomerAgent account={
-                    {
-                        "id": 3,
-                        "fname": "Shigure",
-                        "lname": "Ui",
-                        "role": "customer-agent",
-                        "cart": [1],
-                        "orders": [3],
-                        "avatar": "https://i.imgur.com/fnkEnGgh.jpg",
-                        "active": "normal"
-                    }
-                } />
-            </div>
+            
         </div>
     )
 }

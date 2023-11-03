@@ -30,9 +30,9 @@ import ManageProducts from './routers/admin/ManageProducts'
 import ManageCategories from './routers/admin/ManageCategories'
 import ManageBrands from './routers/admin/ManageBrands'
 import ManageAccounts from './routers/admin/ManageAccounts'
-import EditProductDetail from './routers/admin/EditProductDetail'
-import EditCategoryDetail from './routers/admin/EditCategoryDetail'
-import EditBrandDetail from './routers/admin/EditBrandDetail'
+import EditProductDetail from './routers/admin/product/EditProductDetail'
+import EditCategoryDetail from './routers/admin/category/EditCategoryDetail'
+import EditBrandDetail from './routers/admin/brand/EditBrandDetail'
 import EditAccountDetail from './routers/admin/EditAccountDetail'
 
 // Customer-agent
@@ -156,20 +156,28 @@ const router = createBrowserRouter(
           element: <ManageAccounts />
         },
         {
-          path: '/admin/products/:id',
+          path: '/admin/products/:id/edit',
           element: <EditProductDetail />
         },
         {
-          path: '/admin/categories/:id',
+          path: '/admin/categories/:id/edit',
           element: <EditCategoryDetail />
         },
         {
-          path: '/admin/brands/:id',
+          path: '/admin/brands/:id/edit',
           element: <EditBrandDetail />
         },
         {
-          path: '/admin/accounts/:id',
-          element: <EditAccountDetail />
+          path: '/admin/accounts/:id/edit',
+          element: <EditAccountDetail /> 
+        },
+        {
+          path: '/admin/brands/:id/add',
+          element: <EditAccountDetail /> //thay component
+        },
+        {
+          path: '/admin/categories/:id/add',
+          element: <EditAccountDetail /> //thay component
         },
       ]
     },
@@ -190,16 +198,16 @@ const router = createBrowserRouter(
           element: <ManageComments />
         },
         {
-          path: '/customer-agent/:id/order',
+          path: '/customer-agent/:id/orders',
           element: <ViewOrder />
         },
         {
-          path: '/customer-agent/:id/deliveries/:id',
+          path: '/customer-agent/:id/deliveries/detail',
           element: <EditDeliveryDetail />
         },
         {
           path: '/customer-agent/:id/account',
-          element: <EditAccountDetail />
+          element: <EditCustomerAccount />
         },
       ]
     },

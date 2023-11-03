@@ -1,5 +1,3 @@
-
-
 import { NavDropdown, Navbar, Nav, Container, Col, Row, Button } from 'react-bootstrap'
 import { BsFillCartCheckFill } from "react-icons/bs";
 import { SlLogin } from "react-icons/sl";

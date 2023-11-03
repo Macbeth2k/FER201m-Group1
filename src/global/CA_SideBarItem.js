@@ -1,6 +1,6 @@
 import ListGroup from 'react-bootstrap/ListGroup';
 import { Badge, Image } from 'react-bootstrap';
-import '../css/SidebarItem.css';
+import '../css/CA_SidebarItem.module.css';
 import { Link } from 'react-router-dom';
 export default function SideBarItem({user, index, changeIndex}) {
     // console.log(JSON.stringify(index));

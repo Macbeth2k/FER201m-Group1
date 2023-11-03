@@ -1,0 +1,9 @@
+#Profile {
+  display: flex;
+  align-items: center;
+}
+
+h6 {
+  font-weight: normal; /* Tắt in đậm */
+  text-transform: none; /* Tắt in hoa */
+}
