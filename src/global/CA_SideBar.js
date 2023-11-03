@@ -30,7 +30,7 @@ export default function Sidebar(props) {
     return (
         <div className='p-3' style={{paddingBottom: '0'}}>
             <div className='me-3'>
-                <Search listen={searchHandler} />
+                <Search listen={searchHandler} placeholder='Search...'/>
             </div>
             <div style={{ height: '72vh', overflowY: 'auto' }}>
                 <ListGroup variant="flush">

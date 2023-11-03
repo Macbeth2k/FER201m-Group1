@@ -6,7 +6,7 @@ import Card from 'react-bootstrap/Card';
 import Sidebar from "../global/CA_SideBar";
 import Menu from "../global/CA_Menu";
 import CA_Profile from '../global/CA_Profile';
-import { createContext, useContext, useState } from "react";
+import { createContext, useState } from "react";
 
 export const userContext = createContext();
 
@@ -17,10 +17,8 @@ export default function CustomerAgent() {
         setUser(value)
     }
 
-    const index = indexUser
-
     return (
-        <userContext.Provider value={index}>
+        <userContext.Provider value={{indexUser, setIndexHandler}}>
             <main style={{ backgroundColor: '#CDC4F9', height: '100vh' }}>
                 <Container fluid className='py-3'>
                     <Row>
@@ -48,10 +46,10 @@ export default function CustomerAgent() {
                                         </Col>
                                         <Col md={6} lg={7} xl={8}>
                                             <Container fluid className=''>
-                                                <Menu index={indexUser} />
+                                                <Menu />
                                                 <hr />
                                                 <div style={{ height: '78vh', overflowY: 'auto' }}>
-                                                    <Outlet index={indexUser} />
+                                                    <Outlet />
                                                 </div>
                                             </Container>
                                         </Col>

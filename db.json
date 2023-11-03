@@ -263,9 +263,16 @@
           "quantity": 3
         }
       ],
-      "orders": [1, 2],
+      "orders": [
+        1,
+        2,
+        3
+      ],
       "avatar": "https://i.imgur.com/9SRIArnh.jpg",
-      "active": "normal"
+      "active": "normal",
+      "address": [
+        "đại học FPT, Thạch Hòa, Thạch Thất, Hà Nội"
+      ]
     },
     {
       "id": 2,
@@ -275,17 +282,27 @@
       "cart": [],
       "orders": [],
       "avatar": "https://i.imgur.com/9VMqRCxh.jpg",
-      "active": "normal"
+      "active": "normal",
+      "address": [
+        "đại học FPT, Thạch Hòa, Thạch Thất, Hà Nội"
+      ]
     },
     {
       "id": 3,
       "fname": "Shigure",
       "lname": "Ui",
       "role": "customer-agent",
-      "cart": [1],
-      "orders": [3],
+      "cart": [
+        1
+      ],
+      "orders": [
+        3
+      ],
       "avatar": "https://i.imgur.com/fnkEnGgh.jpg",
-      "active": "normal"
+      "active": "normal",
+      "address": [
+        "đại học FPT, Thạch Hòa, Thạch Thất, Hà Nội"
+      ]
     },
     {
       "id": 4,
@@ -293,9 +310,14 @@
       "lname": "Iroha",
       "role": "delivery-agent",
       "cart": [],
-      "orders": [4],
+      "orders": [
+        4
+      ],
       "avatar": "https://i.imgur.com/6m0Nyn2h.jpg",
-      "active": "normal"
+      "active": "normal",
+      "address": [
+        "đại học FPT, Thạch Hòa, Thạch Thất, Hà Nội"
+      ]
     },
     {
       "id": 5,
@@ -303,9 +325,14 @@
       "lname": "Linh",
       "role": "owner",
       "cart": [],
-      "orders": [4],
+      "orders": [
+        4
+      ],
       "avatar": "https://i.imgur.com/dPVk2znh.jpg",
-      "active": "normal"
+      "active": "normal",
+      "address": [
+        "đại học FPT, Thạch Hòa, Thạch Thất, Hà Nội"
+      ]
     },
     {
       "id": 6,
@@ -320,7 +347,10 @@
       ],
       "orders": [],
       "avatar": "https://i.imgur.com/9SRIArnh.jpg",
-      "active": "disabled"
+      "active": "disabled",
+      "address": [
+        "đại học FPT, Thạch Hòa, Thạch Thất, Hà Nội"
+      ]
     },
     {
       "id": 7,
@@ -335,7 +365,10 @@
       ],
       "orders": [],
       "avatar": "https://i.imgur.com/9SRIArnh.jpg",
-      "active": "no-comment"
+      "active": "no-comment",
+      "address": [
+        "đại học FPT, Thạch Hòa, Thạch Thất, Hà Nội"
+      ]
     },
     {
       "id": 8,
@@ -350,7 +383,10 @@
       ],
       "orders": [],
       "avatar": "https://i.imgur.com/9SRIArnh.jpg",
-      "active": "no-comment"
+      "active": "no-comment",
+      "address": [
+        "đại học FPT, Thạch Hòa, Thạch Thất, Hà Nội"
+      ]
     },
     {
       "id": 9,
@@ -365,7 +401,10 @@
       ],
       "orders": [],
       "avatar": "https://i.imgur.com/9SRIArnh.jpg",
-      "active": "no-comment"
+      "active": "no-comment",
+      "address": [
+        "đại học FPT, Thạch Hòa, Thạch Thất, Hà Nội"
+      ]
     }
   ],
   "messages": [
@@ -489,11 +528,13 @@
   "deliveryOrders": [
     {
       "id": 1,
-      "order": 1
+      "order": 1,
+      "deliveryAgent": 4
     },
     {
       "id": 2,
-      "order": 2
+      "order": 2,
+      "deliveryAgent": 4
     }
   ],
   "comments": [
@@ -501,6 +542,7 @@
       "id": 1,
       "content": "Great racket! I love it!",
       "product": 1,
+      "user": 1,
       "reply_comments": [],
       "time": "2023-10-28 15:30",
       "like": 5,
@@ -510,7 +552,10 @@
       "id": 2,
       "content": "This product is not worth the price.",
       "product": 2,
-      "reply_comments": [1],
+      "user": 2,
+      "reply_comments": [
+        1
+      ],
       "time": "2023-10-29 10:15",
       "like": 2,
       "status": "Non-Appropriate"
@@ -519,7 +564,11 @@
       "id": 3,
       "content": "I had a great shopping experience with this website!",
       "product": 1,
-      "reply_comments": [1, 2],
+      "user": 3,
+      "reply_comments": [
+        1,
+        2
+      ],
       "time": "2023-10-30 08:45",
       "like": 7,
       "status": "Appropriate"
@@ -528,6 +577,7 @@
       "id": 4,
       "content": "The customer support team was very helpful.",
       "product": 2,
+      "user": 2,
       "reply_comments": [],
       "time": "2023-10-31 12:20",
       "like": 3,
@@ -549,25 +599,33 @@
       "id": 1,
       "valid_from": "2023-11-01",
       "valid_to": "2023-11-30",
-      "vouchers": [1]
+      "vouchers": [
+        1
+      ]
     },
     {
       "id": 2,
       "valid_from": "2023-11-05",
       "valid_to": "2023-12-05",
-      "vouchers": [2]
+      "vouchers": [
+        2
+      ]
     }
   ],
   "vouchers": [
     {
       "id": 1,
       "value": 10,
-      "valid_customers": [1]
+      "valid_customers": [
+        1
+      ]
     },
     {
       "id": 2,
       "value": 15,
-      "valid_customers": [2]
+      "valid_customers": [
+        2
+      ]
     }
   ]
 }
