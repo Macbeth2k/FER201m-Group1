@@ -3,6 +3,7 @@
 import { NavDropdown, Navbar, Nav, Container, Col, Row, Button } from 'react-bootstrap'
 import { BsFillCartCheckFill } from "react-icons/bs";
 import { SlLogin } from "react-icons/sl";
+import { Link } from 'react-router-dom'
 
 
 export default function Header_Guest() {
@@ -29,16 +30,10 @@ export default function Header_Guest() {
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav" >
                             <Nav className="me-auto">
-                                <Nav.Link href="/"><div className="h4"> Home</div></Nav.Link>
-                                <div></div>
-                                <Nav.Link href="products"><div className="h4"> Rackets</div></Nav.Link>
-                                <Nav.Link href="/#!"><div className="h4"> Contact</div></Nav.Link>
+                                <Link to="/" className="h4 px-5"> Home</Link>
 
-                                <NavDropdown className="h4" title="Brands" id="basic-nav-dropdown">
-                                    <NavDropdown.Item href="#action/3.1"><div className="h4"> Brand_01</div></NavDropdown.Item>
-                                    <NavDropdown.Divider />
-                                    <NavDropdown.Item href="#action/3.3"><div className="h4"> Brand_02</div></NavDropdown.Item>
-                                </NavDropdown>
+                                <Link to="/products" className="h4 px-3"> Rackets</Link>
+                                <Link to="/#!" className="h4 px-3"> Contact</Link>
                             </Nav>
                         </Navbar.Collapse>
                     </Col>

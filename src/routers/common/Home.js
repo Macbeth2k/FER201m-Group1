@@ -1,7 +1,5 @@
 import React from 'react';
 import {
-    MDBCarousel,
-    MDBCarouselItem,
     MDBBtn,
     MDBCard,
     MDBCardImage,
@@ -13,50 +11,76 @@ import {
     MDBRipple
 } from 'mdb-react-ui-kit';
 
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container, Row, Col, Carousel } from 'react-bootstrap'
+import axios from 'axios'
+import { useEffect, useState } from 'react'
 
 
 export default function Home() {
+    const [products, setProducts] = useState([])
+    const [categories, setCategories] = useState([])
+    const [brands, setBrands] = useState([])
+
+    const instance = axios.create({
+        baseURL: 'http://localhost:3004',
+        timeout: 1000,
+        headers: { 'X-Custom-Header': 'foobar' }
+    });
+    useEffect(() => {
+        instance.get('/products')
+            .then(res => setProducts(res.data))
+    }, [])
+    useEffect(() => {
+        instance.get('/brands')
+            .then(res => setBrands(res.data))
+    }, [])
+
+    useEffect(() => {
+        instance.get('/categories')
+            .then(res => setCategories(res.data))
+    }, [])
+
+
+    console.log(products)
     return (
         <>
+            <div
+                className='p-5 text-center bg-image'
+                style={{ height: 300 }}
+            >
+                <div className='mask' style={{
+                    'backgroundColor': 'rgba(0, 0, 0, 0.05)'
+                }}>
+                    <div className='d-flex justify-content-center align-items-center h-100'>
+                        <div className='text-black'>
+                            <p className='mb-3 font-monospace fw-bold fs-1'>Homepage</p>
+                        </div>
+                    </div>
+                </div>
+            </div >
             <Container>
                 <Row className="mt-5"   >
                     <Col >
-                        <MDBCarousel showIndicators showControls fade>
-                            <MDBCarouselItem
-                                className='w-100 d-block'
-                                itemId={1}
-                                src='https://mdbootstrap.com/img/Photos/Slides/img%20(15).jpg'
-                                alt='...'
-                            >
-                                <h5>First slide label</h5>
+                        <Carousel data-bs-theme="dark">
+                            {
 
-                                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                                <MDBBtn className="w-100">Order now</MDBBtn>
-                            </MDBCarouselItem>
-
-                            <MDBCarouselItem
-                                className='w-100 d-block'
-                                itemId={2}
-                                src='https://mdbootstrap.com/img/Photos/Slides/img%20(22).jpg'
-                                alt='...'
-                            >
-                                <h5>Second slide label</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                <MDBBtn className="w-100">Order now</MDBBtn>
-                            </MDBCarouselItem>
-
-                            <MDBCarouselItem
-                                className='w-100 d-block'
-                                itemId={3}
-                                src='https://mdbootstrap.com/img/Photos/Slides/img%20(23).jpg'
-                                alt='...'
-                            >
-                                <h5>Third slide label</h5>
-                                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                                <MDBBtn className="w-100">Order now</MDBBtn>
-                            </MDBCarouselItem>
-                        </MDBCarousel>
+                                products.map((product, index) => {
+                                    return (
+                                        <Carousel.Item>
+                                            <img
+                                                className="d-block w-100"
+                                                src={product.thumbnail}
+                                                alt="product"
+                                            />
+                                            <Carousel.Caption>
+                                                <h5>{product.name}</h5>
+                                                <p>{product.description}</p>
+                                            </Carousel.Caption>
+                                        </Carousel.Item>
+                                    )
+                                })
+                            }
+                        </Carousel>
                     </Col>
 
                 </Row>
@@ -67,91 +91,65 @@ export default function Home() {
                 </Row>
                 <Row className="mb-5">
                     <MDBRow className='row-cols-1 row-cols-md-3 g-4'>
-                        <MDBCol>
-                            <MDBCard>
-                                <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
-                                    <MDBCardImage src='https://mdbootstrap.com/img/new/standard/nature/111.webp' fluid alt='...' />
-                                    <a>
-                                        <div className='mask' style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }}></div>
-                                    </a>
-                                </MDBRipple>
-                                <MDBCardBody>
-                                    <MDBCardTitle>Card title</MDBCardTitle>
-                                    <MDBCardText>
-                                        Some quick example text to build on the card title and make up the bulk of the card's content.
-                                    </MDBCardText>
-                                    <MDBBtn href='#'>Button</MDBBtn>
-                                </MDBCardBody>
-                            </MDBCard>
-                        </MDBCol>
-                        <MDBCol>
-                            <MDBCard>
-                                <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
-                                    <MDBCardImage src='https://mdbootstrap.com/img/new/standard/nature/111.webp' fluid alt='...' />
-                                    <a>
-                                        <div className='mask' style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }}></div>
-                                    </a>
-                                </MDBRipple>
-                                <MDBCardBody>
-                                    <MDBCardTitle>Card title</MDBCardTitle>
-                                    <MDBCardText>
-                                        Some quick example text to build on the card title and make up the bulk of the card's content.
-                                    </MDBCardText>
-                                    <MDBBtn href='#'>Button</MDBBtn>
-                                </MDBCardBody>
-                            </MDBCard>
-                        </MDBCol>
-                        <MDBCol>
-                            <MDBCard>
-                                <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
-                                    <MDBCardImage src='https://mdbootstrap.com/img/new/standard/nature/111.webp' fluid alt='...' />
-                                    <a>
-                                        <div className='mask' style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }}></div>
-                                    </a>
-                                </MDBRipple>
-                                <MDBCardBody>
-                                    <MDBCardTitle>Card title</MDBCardTitle>
-                                    <MDBCardText>
-                                        Some quick example text to build on the card title and make up the bulk of the card's content.
-                                    </MDBCardText>
-                                    <MDBBtn href='#'>Button</MDBBtn>
-                                </MDBCardBody>
-                            </MDBCard>
-                        </MDBCol>
-                        <MDBCol>
-                            <MDBCard>
-                                <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
-                                    <MDBCardImage src='https://mdbootstrap.com/img/new/standard/nature/111.webp' fluid alt='...' />
-                                    <a>
-                                        <div className='mask' style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }}></div>
-                                    </a>
-                                </MDBRipple>
-                                <MDBCardBody>
-                                    <MDBCardTitle>Card title</MDBCardTitle>
-                                    <MDBCardText>
-                                        Some quick example text to build on the card title and make up the bulk of the card's content.
-                                    </MDBCardText>
-                                    <MDBBtn href='#'>Button</MDBBtn>
-                                </MDBCardBody>
-                            </MDBCard>
-                        </MDBCol>
-                        <MDBCol>
-                            <MDBCard>
-                                <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
-                                    <MDBCardImage src='https://mdbootstrap.com/img/new/standard/nature/111.webp' fluid alt='...' />
-                                    <a>
-                                        <div className='mask' style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }}></div>
-                                    </a>
-                                </MDBRipple>
-                                <MDBCardBody>
-                                    <MDBCardTitle>Card title</MDBCardTitle>
-                                    <MDBCardText>
-                                        Some quick example text to build on the card title and make up the bulk of the card's content.
-                                    </MDBCardText>
-                                    <MDBBtn href='#'>Button</MDBBtn>
-                                </MDBCardBody>
-                            </MDBCard>
-                        </MDBCol>
+                        {
+                            categories.map((category) => {
+                                return (
+                                    <MDBCol>
+                                        <MDBCard>
+                                            <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
+                                                <MDBCardImage src={category.thumbnail} fluid alt='...' />
+                                                <a>
+                                                    <div className='mask' style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }}></div>
+                                                </a>
+                                            </MDBRipple>
+                                            <MDBCardBody>
+                                                <MDBCardTitle>{category.name}</MDBCardTitle>
+                                                <MDBCardText>
+                                                    {category.description}
+                                                </MDBCardText>
+                                                <MDBBtn href='/#!'>Find out now</MDBBtn>
+                                            </MDBCardBody>
+                                        </MDBCard>
+                                    </MDBCol>
+                                )
+                            })
+                        }
+
+
+                    </MDBRow>
+                </Row>
+                <Row className="mt-5">
+                    <Col>
+                        <div className="d-flex justify-content-center fs-1 fw-bold">Featured Brands</div>
+                    </Col>
+                </Row>
+                <Row className="mb-5">
+                    <MDBRow className='row-cols-1 row-cols-md-3 g-4'>
+                        {
+                            brands.map((brand) => {
+                                return (
+                                    <MDBCol >
+                                        <MDBCard>
+                                            <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
+                                                <MDBCardImage src={brand.thumbnail} fluid alt='...' />
+                                                <a>
+                                                    <div className='mask' style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }}></div>
+                                                </a>
+                                            </MDBRipple>
+                                            <MDBCardBody>
+                                                <MDBCardTitle>{brand.name}</MDBCardTitle>
+                                                <MDBCardText>
+                                                    {brand.description}
+                                                </MDBCardText>
+                                                <MDBBtn href='/#!'>Find out now</MDBBtn>
+                                            </MDBCardBody>
+                                        </MDBCard>
+                                    </MDBCol>
+                                )
+                            })
+                        }
+
+
                     </MDBRow>
                 </Row>
                 <Row className="my-5">
@@ -161,94 +159,36 @@ export default function Home() {
                 </Row>
                 <Row className="mb-5">
                     <MDBRow className='row-cols-1 row-cols-md-3 g-4'>
-                        <MDBCol>
-                            <MDBCard>
-                                <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
-                                    <MDBCardImage src='https://mdbootstrap.com/img/new/standard/nature/111.webp' fluid alt='...' />
-                                    <a>
-                                        <div className='mask' style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }}></div>
-                                    </a>
-                                </MDBRipple>
-                                <MDBCardBody>
-                                    <MDBCardTitle>Card title</MDBCardTitle>
-                                    <MDBCardText>
-                                        Some quick example text to build on the card title and make up the bulk of the card's content.
-                                    </MDBCardText>
-                                    <MDBBtn href='#'>Button</MDBBtn>
-                                </MDBCardBody>
-                            </MDBCard>
-                        </MDBCol>
-                        <MDBCol>
-                            <MDBCard>
-                                <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
-                                    <MDBCardImage src='https://mdbootstrap.com/img/new/standard/nature/111.webp' fluid alt='...' />
-                                    <a>
-                                        <div className='mask' style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }}></div>
-                                    </a>
-                                </MDBRipple>
-                                <MDBCardBody>
-                                    <MDBCardTitle>Card title</MDBCardTitle>
-                                    <MDBCardText>
-                                        Some quick example text to build on the card title and make up the bulk of the card's content.
-                                    </MDBCardText>
-                                    <MDBBtn href='#'>Button</MDBBtn>
-                                </MDBCardBody>
-                            </MDBCard>
-                        </MDBCol>
-                        <MDBCol>
-                            <MDBCard>
-                                <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
-                                    <MDBCardImage src='https://mdbootstrap.com/img/new/standard/nature/111.webp' fluid alt='...' />
-                                    <a>
-                                        <div className='mask' style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }}></div>
-                                    </a>
-                                </MDBRipple>
-                                <MDBCardBody>
-                                    <MDBCardTitle>Card title</MDBCardTitle>
-                                    <MDBCardText>
-                                        Some quick example text to build on the card title and make up the bulk of the card's content.
-                                    </MDBCardText>
-                                    <MDBBtn href='#'>Button</MDBBtn>
-                                </MDBCardBody>
-                            </MDBCard>
-                        </MDBCol>
-                        <MDBCol>
-                            <MDBCard>
-                                <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
-                                    <MDBCardImage src='https://mdbootstrap.com/img/new/standard/nature/111.webp' fluid alt='...' />
-                                    <a>
-                                        <div className='mask' style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }}></div>
-                                    </a>
-                                </MDBRipple>
-                                <MDBCardBody>
-                                    <MDBCardTitle>Card title</MDBCardTitle>
-                                    <MDBCardText>
-                                        Some quick example text to build on the card title and make up the bulk of the card's content.
-                                    </MDBCardText>
-                                    <MDBBtn href='#'>Button</MDBBtn>
-                                </MDBCardBody>
-                            </MDBCard>
-                        </MDBCol>
-                        <MDBCol>
-                            <MDBCard>
-                                <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
-                                    <MDBCardImage src='https://mdbootstrap.com/img/new/standard/nature/111.webp' fluid alt='...' />
-                                    <a>
-                                        <div className='mask' style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }}></div>
-                                    </a>
-                                </MDBRipple>
-                                <MDBCardBody>
-                                    <MDBCardTitle>Card title</MDBCardTitle>
-                                    <MDBCardText>
-                                        Some quick example text to build on the card title and make up the bulk of the card's content.
-                                    </MDBCardText>
-                                    <MDBBtn href='#'>Button</MDBBtn>
-                                </MDBCardBody>
-                            </MDBCard>
-                        </MDBCol>
+
+                        {
+                            products.map((product) => {
+                                return (
+                                    <>
+                                        <MDBCol>
+                                            <MDBCard>
+                                                <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
+                                                    <MDBCardImage src={product.image} fluid alt='new product' />
+                                                    <a>
+                                                        <div className='mask' style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }}></div>
+                                                    </a>
+                                                </MDBRipple>
+                                                <MDBCardBody>
+                                                    <MDBCardTitle>{product.name}</MDBCardTitle>
+                                                    <MDBCardText>
+                                                        {product.description}
+                                                    </MDBCardText>
+                                                    <MDBBtn href='#'>Buy now</MDBBtn>
+                                                </MDBCardBody>
+                                            </MDBCard>
+                                        </MDBCol>
+                                    </>
+                                )
+                            })
+                        }
+
                     </MDBRow>
-                </Row>  
-            </Container>
+                </Row>
+            </Container >
         </>
     )
 }
