@@ -5,16 +5,14 @@ import ListGroup from 'react-bootstrap/ListGroup';
 export default function Sidebar(props) {
     const [users, setUsers] = useState([])
     const [search, setSearch] = useState('')
+    
     useEffect(() => {
         fetch('http://localhost:3004/accounts')
             .then(response => response.json())
             .then(data => {
                 setUsers(data)
-                // console.log(JSON.stringify(data));
-                // console.log(JSON.stringify(data[0]));
                 props.changeIndex(data[0])
-                // console.log(`index: ${props.index}`)
-                // console.log(JSON.stringify(props.index))
+                
             })
             .catch(err => console.log(err))
     }, [])
@@ -35,7 +33,7 @@ export default function Sidebar(props) {
             <div style={{ height: '72vh', overflowY: 'auto' }}>
                 <ListGroup variant="flush">
                     {listUserBySearch.map(user => (
-                        <SideBarItem key={user.id} user={user} index={props.index} changeIndex={props.changeIndex} />
+                        <SideBarItem key={user.id} user={user}/>
                     ))}
 
                 </ListGroup>

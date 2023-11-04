@@ -1,24 +1,42 @@
-import ListGroup from 'react-bootstrap/ListGroup';
-import { Badge, Image } from 'react-bootstrap';
-import '../css/CA_SidebarItem.module.css';
-import { Link, useLocation } from 'react-router-dom';
+import ListGroup from 'react-bootstrap/ListGroup'
+import { Badge, Image } from 'react-bootstrap'
+import '../css/CA_SidebarItem.module.css'
+import { Link, useLocation } from 'react-router-dom'
 import { useState, useContext, useEffect } from 'react'
 import { userContext } from '../layout/CustomerAgent'
 export default function SideBarItem({ user }) {
     const { indexUser, setIndexHandler } = useContext(userContext)
     const location = useLocation()
     const [newPath, setNewPath] = useState('')
+    const [onHover, setOnHover] = useState(false)
 
-        useEffect(() => {
-            const currentPath = location.pathname
-            const [prefix, suffix] = currentPath.split(indexUser.id)
-            const updatedPath = `${user.id}${suffix}`
-            setNewPath(updatedPath)
-        }, [location.pathname])
+    useEffect(() => {
+        const currentPath = location.pathname
+        const [prefix, suffix] = currentPath.split(indexUser.id)
+        const updatedPath = `${user.id}${suffix}`
+        setNewPath(updatedPath)
+    }, [location.pathname])
+
+    const pointerHoverHandler = () => {
+        // console.log('hover' + user.id)
+        setOnHover(true)
+    }
+
+    const pointerNotHoverHandler = () => {
+        // console.log('not hover' + user.id)
+        setOnHover(false)
+    }
+
+    // console.log(onHover + ' ' + user.id)
 
     return (
         <ListGroup.Item className="p-2 border-bottom chat-item"
-            style={user.id === indexUser.id ? { backgroundColor: 'rgba(0,0,0,0.1)' } : {}}>
+            style={{
+                ...onHover === true ? { backgroundColor: 'rgba(0,0,0,0.1)' } : {},
+                ...user.id === indexUser.id ? { backgroundColor: 'rgba(0,0,0,0.2)' } : {}
+            }}
+            onMouseOver={pointerHoverHandler} onMouseOut={pointerNotHoverHandler}
+        >
             <Link to={newPath} className="d-flex justify-content-between" onClick={() => setIndexHandler(user)}>
                 <div className="d-flex flex-row">
                     <div>
@@ -42,5 +60,5 @@ export default function SideBarItem({ user }) {
                 </div>
             </Link>
         </ListGroup.Item>
-    );
+    )
 }
