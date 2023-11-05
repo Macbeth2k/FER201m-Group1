@@ -306,15 +306,11 @@
       "cart": [
         {
           "productId": 1,
-          "quantity": 3
+          "quantity": 1
         },
         {
           "productId": 2,
-          "quantity": 30
-        },
-        {
-          "productId": 4,
-          "quantity": 3
+          "quantity": 1
         },
         {
           "productId": 3,
