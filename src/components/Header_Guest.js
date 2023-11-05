@@ -1,16 +1,16 @@
-import { NavDropdown, Navbar, Nav, Container, Col, Row, Button } from 'react-bootstrap'
-import { BsFillCartCheckFill } from "react-icons/bs";
-import { SlLogin } from "react-icons/sl";
-import { Link } from 'react-router-dom'
-
+import { Navbar, Nav, Container, Col, Row } from 'react-bootstrap'
+import { Link, useNavigate } from 'react-router-dom'
+import { MDBIcon, MDBBadge } from 'mdb-react-ui-kit';
 
 export default function Header_Guest() {
+    const navigate = useNavigate()
+
     return (
         <>
             <Navbar expand="lg" className="bg-body-tertiary" >
                 <Container>
                     <Col md={1}>
-                        <Navbar.Brand href="/">
+                        <Navbar.Brand href="" onClick={() => navigate('/')}>
                             <img
                                 alt=""
                                 src="/img/logo.svg"
@@ -22,7 +22,7 @@ export default function Header_Guest() {
 
                     </Col>
                     <Col md={3}>
-                        <Navbar.Brand href="/" className="h1">Racket Shop</Navbar.Brand>
+                        <Navbar.Brand onClick={() => navigate('/')} className="h1">Racket Shop</Navbar.Brand>
                     </Col>
                     <Col >
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -35,11 +35,20 @@ export default function Header_Guest() {
                             </Nav>
                         </Navbar.Collapse>
                     </Col>
-                    <Col md={1}>
+                    <Col md={2}>
                         <Container>
                             <Row>
-                                <Col className="h4"> <a href="\#!"><BsFillCartCheckFill /></a></Col>
-                                <Col className="h4"> <a href="\#!"><SlLogin /></a></Col>
+                                <Col>
+                                    <Link to={`http://localhost:3000/login`} className="h5" > <a className='mx-3' href='#!'>
+                                        <MDBIcon fas icon="shopping-cart" size='lg' />
+                                        <MDBBadge color='danger' notification pill>
+                                            0
+                                        </MDBBadge>
+                                    </a></Link>
+                                </Col>
+                                <Col >
+                                    <Link to="http://localhost:3000/login" className="h4">  <MDBIcon fas icon="sign-in-alt" /></Link>
+                                </Col>
                             </Row>
                         </Container>
                     </Col>

@@ -4,39 +4,37 @@
       "id": 1,
       "name": "Yonex",
       "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo-Yonex.svg/1280px-Logo-Yonex.svg.png",
-      "description" : "Celebrated for its innovation and performance, our badminton racket brand consistently delivers top-quality products. Elevate your game with our rackets, known for their power and precision, suitable for players of all levels."
+      "description": "Celebrated for its innovation and performance, our badminton racket brand consistently delivers top-quality products. Elevate your game with our rackets, known for their power and precision, suitable for players of all levels."
     },
     {
       "id": 2,
       "name": "Li-Ning",
       "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/2/26/LiNing_Logo.svg",
-      "description" : "Celebrated for its innovation and performance, our badminton racket brand consistently delivers top-quality products. Elevate your game with our rackets, known for their power and precision, suitable for players of all levels."
-    
+      "description": "Celebrated for its innovation and performance, our badminton racket brand consistently delivers top-quality products. Elevate your game with our rackets, known for their power and precision, suitable for players of all levels."
     },
     {
       "id": 3,
       "name": "Victor",
       "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Victor.gif",
-      "description" : "Celebrated for its innovation and performance, our badminton racket brand consistently delivers top-quality products. Elevate your game with our rackets, known for their power and precision, suitable for players of all levels."
+      "description": "Celebrated for its innovation and performance, our badminton racket brand consistently delivers top-quality products. Elevate your game with our rackets, known for their power and precision, suitable for players of all levels."
     },
     {
       "id": 4,
       "name": "Kumpoo",
       "thumbnail": "https://m.media-amazon.com/images/S/stores-image-uploads-eu-prod/4/AmazonStores/A1F83G8C2ARO7P/18517eb0ab081cc517346a55e7ac14de.w12500.h2501._SL5000_CR0%2C0%2C5000%2C1000_SX1500_.jpg",
-      "description" : "Celebrated for its innovation and performance, our badminton racket brand consistently delivers top-quality products. Elevate your game with our rackets, known for their power and precision, suitable for players of all levels."
-    
+      "description": "Celebrated for its innovation and performance, our badminton racket brand consistently delivers top-quality products. Elevate your game with our rackets, known for their power and precision, suitable for players of all levels."
     },
     {
       "id": 5,
       "name": "kawasaki",
       "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/0/00/Kawasaki-Logo.jpg",
-      "description" : "Celebrated for its innovation and performance, our badminton racket brand consistently delivers top-quality products. Elevate your game with our rackets, known for their power and precision, suitable for players of all levels."
+      "description": "Celebrated for its innovation and performance, our badminton racket brand consistently delivers top-quality products. Elevate your game with our rackets, known for their power and precision, suitable for players of all levels."
     },
     {
       "id": 6,
       "name": "Proace",
       "thumbnail": "https://2.bp.blogspot.com/-m-nGtvMJH_k/UaBtQXuqovI/AAAAAAAAEiE/RL7cGbVVP6Y/s1600/Proace.jpg",
-      "description" : "Celebrated for its innovation and performance, our badminton racket brand consistently delivers top-quality products. Elevate your game with our rackets, known for their power and precision, suitable for players of all levels."
+      "description": "Celebrated for its innovation and performance, our badminton racket brand consistently delivers top-quality products. Elevate your game with our rackets, known for their power and precision, suitable for players of all levels."
     }
   ],
   "products": [
@@ -71,7 +69,7 @@
       "brand": 2,
       "category": 1,
       "skill_lv": "Intermediate",
-       "thumbnail": "https://maxsports.ca/cdn/shop/collections/bad-category_edb875b3-dbaa-4698-997c-0a9f45010205.jpg?v=1662263823&width=750",
+      "thumbnail": "https://maxsports.ca/cdn/shop/collections/bad-category_edb875b3-dbaa-4698-997c-0a9f45010205.jpg?v=1662263823&width=750",
       "image": "https://maxsports.ca/cdn/shop/files/all_nf-800p_269-1_png.webp?v=1697475192&width=360"
     },
     {
@@ -88,7 +86,7 @@
       "brand": 1,
       "category": 1,
       "skill_lv": "Advanced",
-       "thumbnail": "https://maxsports.ca/cdn/shop/collections/bad-category_edb875b3-dbaa-4698-997c-0a9f45010205.jpg?v=1662263823&width=750",
+      "thumbnail": "https://maxsports.ca/cdn/shop/collections/bad-category_edb875b3-dbaa-4698-997c-0a9f45010205.jpg?v=1662263823&width=750",
       "image": "https://maxsports.ca/cdn/shop/files/all_nf-002f_004-1_png.webp?v=1694906791&width=360"
     },
     {
@@ -105,7 +103,7 @@
       "brand": 2,
       "category": 2,
       "skill_lv": "Intermediate",
-       "thumbnail": "https://maxsports.ca/cdn/shop/collections/bad-category_edb875b3-dbaa-4698-997c-0a9f45010205.jpg?v=1662263823&width=750",
+      "thumbnail": "https://maxsports.ca/cdn/shop/collections/bad-category_edb875b3-dbaa-4698-997c-0a9f45010205.jpg?v=1662263823&width=750",
       "image": "https://maxsports.ca/cdn/shop/files/all_nf-800p_269-1_png.webp?v=1697475192&width=360"
     },
     {
@@ -122,7 +120,7 @@
       "brand": 4,
       "category": 3,
       "skill_lv": "Advanced",
-       "thumbnail": "https://maxsports.ca/cdn/shop/collections/bad-category_edb875b3-dbaa-4698-997c-0a9f45010205.jpg?v=1662263823&width=750",
+      "thumbnail": "https://maxsports.ca/cdn/shop/collections/bad-category_edb875b3-dbaa-4698-997c-0a9f45010205.jpg?v=1662263823&width=750",
       "image": "https://maxsports.ca/cdn/shop/files/all_nf-002f_004-1_png.webp?v=1694906791&width=360"
     },
     {
@@ -139,7 +137,7 @@
       "brand": 3,
       "category": 1,
       "skill_lv": "Intermediate",
-       "thumbnail": "https://maxsports.ca/cdn/shop/collections/bad-category_edb875b3-dbaa-4698-997c-0a9f45010205.jpg?v=1662263823&width=750",
+      "thumbnail": "https://maxsports.ca/cdn/shop/collections/bad-category_edb875b3-dbaa-4698-997c-0a9f45010205.jpg?v=1662263823&width=750",
       "image": "https://maxsports.ca/cdn/shop/files/all_nf-800p_269-1_png.webp?v=1697475192&width=360"
     },
     {
@@ -156,7 +154,7 @@
       "brand": 5,
       "category": 2,
       "skill_lv": "Intermediate",
-       "thumbnail": "https://maxsports.ca/cdn/shop/collections/bad-category_edb875b3-dbaa-4698-997c-0a9f45010205.jpg?v=1662263823&width=750",
+      "thumbnail": "https://maxsports.ca/cdn/shop/collections/bad-category_edb875b3-dbaa-4698-997c-0a9f45010205.jpg?v=1662263823&width=750",
       "image": "https://maxsports.ca/cdn/shop/files/all_nf-800p_269-1_png.webp?v=1697475192&width=360"
     },
     {
@@ -173,7 +171,7 @@
       "brand": 6,
       "category": 3,
       "skill_lv": "Intermediate",
-       "thumbnail": "https://maxsports.ca/cdn/shop/collections/bad-category_edb875b3-dbaa-4698-997c-0a9f45010205.jpg?v=1662263823&width=750",
+      "thumbnail": "https://maxsports.ca/cdn/shop/collections/bad-category_edb875b3-dbaa-4698-997c-0a9f45010205.jpg?v=1662263823&width=750",
       "image": "https://maxsports.ca/cdn/shop/files/all_nf-800p_269-1_png.webp?v=1697475192&width=360"
     },
     {
@@ -190,7 +188,7 @@
       "brand": 1,
       "category": 1,
       "skill_lv": "Advanced",
-       "thumbnail": "https://maxsports.ca/cdn/shop/collections/bad-category_edb875b3-dbaa-4698-997c-0a9f45010205.jpg?v=1662263823&width=750",
+      "thumbnail": "https://maxsports.ca/cdn/shop/collections/bad-category_edb875b3-dbaa-4698-997c-0a9f45010205.jpg?v=1662263823&width=750",
       "image": "https://maxsports.ca/cdn/shop/files/all_nf-002f_004-1_png.webp?v=1694906791&width=360"
     },
     {
@@ -207,7 +205,7 @@
       "brand": 2,
       "category": 1,
       "skill_lv": "Intermediate",
-       "thumbnail": "https://maxsports.ca/cdn/shop/collections/bad-category_edb875b3-dbaa-4698-997c-0a9f45010205.jpg?v=1662263823&width=750",
+      "thumbnail": "https://maxsports.ca/cdn/shop/collections/bad-category_edb875b3-dbaa-4698-997c-0a9f45010205.jpg?v=1662263823&width=750",
       "image": "https://maxsports.ca/cdn/shop/files/all_nf-800p_269-1_png.webp?v=1697475192&width=360"
     },
     {
@@ -224,7 +222,7 @@
       "brand": 3,
       "category": 1,
       "skill_lv": "Intermediate",
-       "thumbnail": "https://maxsports.ca/cdn/shop/collections/bad-category_edb875b3-dbaa-4698-997c-0a9f45010205.jpg?v=1662263823&width=750",
+      "thumbnail": "https://maxsports.ca/cdn/shop/collections/bad-category_edb875b3-dbaa-4698-997c-0a9f45010205.jpg?v=1662263823&width=750",
       "image": "https://maxsports.ca/cdn/shop/files/all_nf-002f_004-1_png.webp?v=1694906791&width=360"
     },
     {
@@ -241,7 +239,7 @@
       "brand": 5,
       "category": 1,
       "skill_lv": "Intermediate",
-       "thumbnail": "https://maxsports.ca/cdn/shop/collections/bad-category_edb875b3-dbaa-4698-997c-0a9f45010205.jpg?v=1662263823&width=750",
+      "thumbnail": "https://maxsports.ca/cdn/shop/collections/bad-category_edb875b3-dbaa-4698-997c-0a9f45010205.jpg?v=1662263823&width=750",
       "image": "https://maxsports.ca/cdn/shop/files/all_nf-800p_269-1_png.webp?v=1697475192&width=360"
     },
     {
@@ -258,7 +256,7 @@
       "brand": 1,
       "category": 2,
       "skill_lv": "Advanced",
-       "thumbnail": "https://maxsports.ca/cdn/shop/collections/bad-category_edb875b3-dbaa-4698-997c-0a9f45010205.jpg?v=1662263823&width=750",
+      "thumbnail": "https://maxsports.ca/cdn/shop/collections/bad-category_edb875b3-dbaa-4698-997c-0a9f45010205.jpg?v=1662263823&width=750",
       "image": "https://maxsports.ca/cdn/shop/files/all_nf-800p_269-1_png.webp?v=1697475192&width=360"
     },
     {
@@ -275,7 +273,7 @@
       "brand": 6,
       "category": 3,
       "skill_lv": "Intermediate",
-       "thumbnail": "https://maxsports.ca/cdn/shop/collections/bad-category_edb875b3-dbaa-4698-997c-0a9f45010205.jpg?v=1662263823&width=750",
+      "thumbnail": "https://maxsports.ca/cdn/shop/collections/bad-category_edb875b3-dbaa-4698-997c-0a9f45010205.jpg?v=1662263823&width=750",
       "image": "https://maxsports.ca/cdn/shop/files/all_nf-002f_004-1_png.webp?v=1694906791&width=360"
     }
   ],
@@ -286,7 +284,7 @@
       "thumbnail": "https://img.freepik.com/premium-vector/play-badminton-poster-with-single-player-with-badminton-racket-flying-shuttlecock_654325-325.jpg?w=740",
       "description": "Unleash power and precision with our men's badminton racket. Lightweight and high-performing, it's the choice for players seeking control and speed on the court"
     },
-      {
+    {
       "id": 2,
       "name": "women-single",
       "thumbnail": "https://img.freepik.com/premium-vector/singles-badminton-game-illustration-with-woman-swinging-her-racket-beat-off-shuttlecock_654325-316.jpg?w=740",
@@ -297,7 +295,6 @@
       "name": "doubles",
       "thumbnail": "https://img.freepik.com/free-vector/badminton-concept-illustration_114360-6787.jpg?w=740&t=st=1698985890~exp=1698986490~hmac=d83bb6ab55247ccdf9830e5110de77f19f73f3f0b54d65329dd679fffc2ac2a3",
       "description": "Enhance your doubles play with our specially crafted doubles badminton racket. It's designed for precision and teamwork, making it your winning choice on the court."
-   
     }
   ],
   "accounts": [
@@ -310,11 +307,28 @@
         {
           "productId": 1,
           "quantity": 3
+        },
+        {
+          "productId": 2,
+          "quantity": 30
+        },
+        {
+          "productId": 4,
+          "quantity": 3
+        },
+        {
+          "productId": 3,
+          "quantity": 1
         }
       ],
-      "orders": [1, 2],
+      "orders": [
+        1,
+        2
+      ],
       "avatar": "https://i.imgur.com/9SRIArnh.jpg",
-      "active": "normal"
+      "active": "normal",
+      "email": "email_1@gmail.com",
+      "password": "123"
     },
     {
       "id": 2,
@@ -324,17 +338,25 @@
       "cart": [],
       "orders": [],
       "avatar": "https://i.imgur.com/9VMqRCxh.jpg",
-      "active": "normal"
+      "active": "normal",
+      "email": "email_2@gmail.com",
+      "password": "123"
     },
     {
       "id": 3,
       "fname": "Shigure",
       "lname": "Ui",
       "role": "customer-agent",
-      "cart": [1],
-      "orders": [3],
+      "cart": [
+        1
+      ],
+      "orders": [
+        3
+      ],
       "avatar": "https://i.imgur.com/fnkEnGgh.jpg",
-      "active": "normal"
+      "active": "normal",
+      "email": "email_3@gmail.com",
+      "password": "123"
     },
     {
       "id": 4,
@@ -342,9 +364,13 @@
       "lname": "Iroha",
       "role": "delivery-agent",
       "cart": [],
-      "orders": [4],
+      "orders": [
+        4
+      ],
       "avatar": "https://i.imgur.com/6m0Nyn2h.jpg",
-      "active": "normal"
+      "active": "normal",
+      "email": "email_4@gmail.com",
+      "password": "123"
     },
     {
       "id": 5,
@@ -352,9 +378,13 @@
       "lname": "Linh",
       "role": "owner",
       "cart": [],
-      "orders": [4],
+      "orders": [
+        4
+      ],
       "avatar": "https://i.imgur.com/dPVk2znh.jpg",
-      "active": "normal"
+      "active": "normal",
+      "email": "email_5@gmail.com",
+      "password": "123"
     },
     {
       "id": 6,
@@ -369,7 +399,9 @@
       ],
       "orders": [],
       "avatar": "https://i.imgur.com/9SRIArnh.jpg",
-      "active": "disabled"
+      "active": "disabled",
+      "email": "email_6@gmail.com",
+      "password": "123"
     },
     {
       "id": 7,
@@ -384,7 +416,9 @@
       ],
       "orders": [],
       "avatar": "https://i.imgur.com/9SRIArnh.jpg",
-      "active": "no-comment"
+      "active": "no-comment",
+      "email": "email_7@gmail.com",
+      "password": "123"
     },
     {
       "id": 8,
@@ -399,7 +433,9 @@
       ],
       "orders": [],
       "avatar": "https://i.imgur.com/9SRIArnh.jpg",
-      "active": "no-comment"
+      "active": "no-comment",
+      "email": "email_8@gmail.com",
+      "password": "123"
     },
     {
       "id": 9,
@@ -414,7 +450,9 @@
       ],
       "orders": [],
       "avatar": "https://i.imgur.com/9SRIArnh.jpg",
-      "active": "no-comment"
+      "active": "no-comment",
+      "email": "email_9@gmail.com",
+      "password": "123"
     }
   ],
   "messages": [
@@ -559,7 +597,9 @@
       "id": 2,
       "content": "This product is not worth the price.",
       "product": 2,
-      "reply_comments": [1],
+      "reply_comments": [
+        1
+      ],
       "time": "2023-10-29 10:15",
       "like": 2,
       "status": "Non-Appropriate"
@@ -568,7 +608,10 @@
       "id": 3,
       "content": "I had a great shopping experience with this website!",
       "product": 1,
-      "reply_comments": [1, 2],
+      "reply_comments": [
+        1,
+        2
+      ],
       "time": "2023-10-30 08:45",
       "like": 7,
       "status": "Appropriate"
@@ -598,25 +641,33 @@
       "id": 1,
       "valid_from": "2023-11-01",
       "valid_to": "2023-11-30",
-      "vouchers": [1]
+      "vouchers": [
+        1
+      ]
     },
     {
       "id": 2,
       "valid_from": "2023-11-05",
       "valid_to": "2023-12-05",
-      "vouchers": [2]
+      "vouchers": [
+        2
+      ]
     }
   ],
   "vouchers": [
     {
       "id": 1,
       "value": 10,
-      "valid_customers": [1]
+      "valid_customers": [
+        1
+      ]
     },
     {
       "id": 2,
       "value": 15,
-      "valid_customers": [2]
+      "valid_customers": [
+        2
+      ]
     }
   ],
   "hot_products": [
@@ -641,22 +692,22 @@
   ],
   "new_products": [
     {
-      "id": 3
+      "id": 10
     },
     {
-      "id": 6
+      "id": 11
     },
     {
-      "id": 9
+      "id": 12
     },
     {
       "id": 13
     },
     {
-      "id": 16
+      "id": 14
     },
     {
-      "id": 19
+      "id": 15
     }
   ]
 }

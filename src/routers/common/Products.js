@@ -7,7 +7,6 @@ import {
     MDBCard,
     MDBCardBody,
     MDBCardImage,
-    MDBIcon,
     MDBBtn,
     MDBRipple,
     MDBInputGroup,
@@ -22,9 +21,12 @@ export default function Products() {
     const [brands, setBrands] = useState([])
     useEffect(() => {
         axios.get('http://localhost:3004/products')
-            .then(function (response) {
-                // handle success
-                setProducts([...response.data]);
+            .then(res => res.data)
+            .then(res => {
+                setProducts(res.filter((product) => {
+                    return product.quantity > 0
+                }))
+
             })
     }, [])
     useEffect(() => {
@@ -82,7 +84,7 @@ export default function Products() {
                         <MDBDropdown className="w-100">
                             <MDBDropdownToggle>Short By</MDBDropdownToggle>
                             <MDBDropdownMenu>
-                                <MDBDropdownItem link>Name</MDBDropdownItem>
+                                <MDBDropdownItem link>A-Z</MDBDropdownItem>
                                 <MDBDropdownItem link>Price ascending</MDBDropdownItem>
                                 <MDBDropdownItem link>Price descending</MDBDropdownItem>
                             </MDBDropdownMenu>
@@ -90,7 +92,7 @@ export default function Products() {
                     </Col>
                     <Col>
                         <MDBInputGroup tag="form" className='d-flex w-auto mb-3'>
-                            <input className='form-control' placeholder="Type query" aria-label="Search" type='Search' />
+                            <input className='form-control' placeholder="Search by name" aria-label="Search" type='Search' />
                             <MDBBtn outline>Search</MDBBtn>
                         </MDBInputGroup>
                     </Col>
@@ -108,7 +110,7 @@ export default function Products() {
                                     <div className="mb-3">
                                         <Form.Check
                                             type="checkbox"
-                                            label="Under 1M VNĐ"
+                                            label="Under 1M vnd"
                                         />
                                     </div>
                                 </Col>
@@ -119,7 +121,7 @@ export default function Products() {
                                     <div className="mb-3">
                                         <Form.Check
                                             type="checkbox"
-                                            label="Between 1M - 1M5 VNĐ"
+                                            label="Between 1M - 1M5 vnd"
                                         />
                                     </div>
                                 </Col>
@@ -130,7 +132,7 @@ export default function Products() {
                                     <div className="mb-3">
                                         <Form.Check
                                             type="checkbox"
-                                            label="between 1M5 - 3M VNĐ"
+                                            label="Between 1M5 - 3M vnd"
                                         />
                                     </div>
                                 </Col>
@@ -141,7 +143,7 @@ export default function Products() {
                                     <div className="mb-3">
                                         <Form.Check
                                             type="checkbox"
-                                            label="Upper 3M VNĐ"
+                                            label="Upper 3M vnd"
                                         />
                                     </div>
                                 </Col>
@@ -181,7 +183,7 @@ export default function Products() {
                                     <div className="mb-3">
                                         <Form.Check
                                             type="checkbox"
-                                            label="Under $25"
+                                            label="Red"
                                         />
                                     </div>
                                 </Col>
@@ -192,7 +194,7 @@ export default function Products() {
                                     <div className="mb-3">
                                         <Form.Check
                                             type="checkbox"
-                                            label="Under $25"
+                                            label="Yellow"
                                         />
                                     </div>
                                 </Col>
@@ -203,7 +205,7 @@ export default function Products() {
                                     <div className="mb-3">
                                         <Form.Check
                                             type="checkbox"
-                                            label="Under $25"
+                                            label="Orange"
                                         />
                                     </div>
                                 </Col>
@@ -214,7 +216,29 @@ export default function Products() {
                                     <div className="mb-3">
                                         <Form.Check
                                             type="checkbox"
-                                            label="Under $25"
+                                            label="Green"
+                                        />
+                                    </div>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col>
+
+                                    <div className="mb-3">
+                                        <Form.Check
+                                            type="checkbox"
+                                            label="Black"
+                                        />
+                                    </div>
+                                </Col>
+                            </Row>
+                            <Row>
+                                <Col>
+
+                                    <div className="mb-3">
+                                        <Form.Check
+                                            type="checkbox"
+                                            label="Blue"
                                         />
                                     </div>
                                 </Col>
@@ -230,7 +254,7 @@ export default function Products() {
                                     <div className="mb-3">
                                         <Form.Check
                                             type="checkbox"
-                                            label="Under $25"
+                                            label="Under 25 "
                                         />
                                     </div>
                                 </Col>
@@ -241,7 +265,7 @@ export default function Products() {
                                     <div className="mb-3">
                                         <Form.Check
                                             type="checkbox"
-                                            label="Under $25"
+                                            label="Under 25"
                                         />
                                     </div>
                                 </Col>
@@ -252,7 +276,7 @@ export default function Products() {
                                     <div className="mb-3">
                                         <Form.Check
                                             type="checkbox"
-                                            label="Under $25"
+                                            label="Under 25"
                                         />
                                     </div>
                                 </Col>
@@ -263,7 +287,7 @@ export default function Products() {
                                     <div className="mb-3">
                                         <Form.Check
                                             type="checkbox"
-                                            label="Under $25"
+                                            label="Under 25"
                                         />
                                     </div>
                                 </Col>
@@ -312,7 +336,7 @@ export default function Products() {
                                                         <Link to={`http://localhost:3000/products/${product.id}`} className="text-reset">
                                                             <p>{getBrandName(product.brand)}</p>
                                                         </Link>
-                                                        <h6 className="mb-3">${product.price}</h6>
+                                                        <h6 className="mb-3">{product.price} vnd</h6>
                                                     </MDBCardBody>
                                                 </MDBCard>
                                             </MDBCol>

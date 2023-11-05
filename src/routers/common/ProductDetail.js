@@ -14,8 +14,13 @@ import {
     MDBTextArea
 } from "mdb-react-ui-kit";
 import { Container, Row, Col } from 'react-bootstrap'
-import { useParams } from 'react-router-dom'
-import { useEffect, useState } from 'react'
+import { useParams, useNavigate } from 'react-router-dom'
+import { useEffect, useState, useCallback } from 'react'
+import { useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux';
+import { ToastContainer, toast } from 'react-toastify';
+
+
 import axios from 'axios'
 
 export default function ProductDetail() {
@@ -25,11 +30,23 @@ export default function ProductDetail() {
         headers: { 'X-Custom-Header': 'foobar' }
     })
 
-    const { id } = useParams();
+    const dispatch = useDispatch()
+
+    const { id } = useParams()
     const [product, setProduct] = useState({})
     const [products, setProducts] = useState([])
+    const [brands, setBrands] = useState([])
     const [comments, setComments] = useState([])
+    const [account, setAccount] = useState([])
 
+
+    const navigate = useNavigate()
+    const currentAccount = useSelector(state => state.user.account)
+
+    useEffect(() => {
+        instance.get(`/accounts/${currentAccount.id}`)
+            .then(response => setAccount(response.data))
+    }, [currentAccount.id])
 
     useEffect(() => {
         instance.get(`/products/${id}`)
@@ -46,11 +63,69 @@ export default function ProductDetail() {
             })
     }, [])
 
+    useEffect(() => {
+        instance.get('/products')
+            .then(response => response.data)
+            .then(response => {
+                const filteredProducts = response.filter(p => {
+                    return p.category === product.category && p.id !== product.id;
+                })
+                setProducts(filteredProducts);
+            })
+    }, [product]);
 
     useEffect(() => {
-        instance.get('products')
-            .then(response => setProducts(response.data))
+        instance.get('/brands')
+            .then(response => response.data)
+            .then(res => {
+                setBrands(res)
+            })
     }, [])
+
+    const getBrandName = useCallback((brandId) => {
+        const brand = brands.find(brand => brand.id === brandId)
+        return brand ? brand.name : "Cannot find brand"
+    }, [brands]);
+
+    const handleCart = () => {
+        let currentCart = account.cart.find((c) => {
+            return c?.productId === product.id
+        })
+        if (currentCart !== undefined) {
+            let newAccountCart = account.cart.filter((cart) => {
+                return cart != currentCart
+            })
+            ++currentCart.quantity
+            dispatch({
+                type: 'FETCH_USER_LOGIN_SUCCESS',
+                payload: account
+            })
+            return [currentCart, ...newAccountCart]
+        } else {
+            let newCart = {
+                productId: product?.id,
+                quantity: 1
+            }
+            dispatch({
+                type: 'FETCH_USER_LOGIN_SUCCESS',
+                payload: account
+            })
+            return [newCart, ...account.cart]
+        }
+    }
+
+    const handleAddToCart = () => {
+        axios.put(`http://localhost:3004/accounts/${account.id}`, {
+            ...account,
+            'cart': handleCart()
+        })
+        toast.success("Add to cart success!", {
+            theme: 'colored',
+            position: toast.POSITION.BOTTOM_RIGHT
+        })
+    }
+
+
     return (
         <>
             <div
@@ -79,7 +154,7 @@ export default function ProductDetail() {
                             />
                             <MDBCardBody>
                                 <div className="text-center">
-                                    <MDBCardTitle>{product.brand}</MDBCardTitle>
+                                    <MDBCardTitle>{getBrandName(product.brand)}</MDBCardTitle>
                                     <p className="text-muted mb-4">{product.name}</p>
                                 </div>
                                 <div>
@@ -133,9 +208,10 @@ export default function ProductDetail() {
                                     <MDBTypography tag="h5">${product.price}</MDBTypography>
                                 </div>
 
-                                <MDBBtn color="dark" block size="lg">
+                                <MDBBtn color="dark" block size="lg" onClick={handleAddToCart}>
                                     Add to cart
                                 </MDBBtn>
+                                <ToastContainer />
                             </div>
                         </MDBCol>
                     </Col>
