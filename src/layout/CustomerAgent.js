@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom"
+import { useNavigate, useLocation, Outlet } from "react-router-dom"
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -6,21 +6,24 @@ import Card from 'react-bootstrap/Card';
 import Sidebar from "../global/CA_SideBar";
 import Menu from "../global/CA_Menu";
 import CA_Profile from '../global/CA_Profile';
-import { createContext, useContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 
 export const userContext = createContext();
 
 export default function CustomerAgent() {
     const [indexUser, setUser] = useState({});
-
+    const location = useLocation()
+    const currentPath = location.pathname
+    const navigate = useNavigate()
     const setIndexHandler = (value) => {
         setUser(value)
     }
-
-    const index = indexUser
+    useEffect(() => {
+        if (currentPath == '/customer-agent/') navigate('/customer-agent/1/messages')
+    }, []);
 
     return (
-        <userContext.Provider value={index}>
+        <userContext.Provider value={{ indexUser, setIndexHandler }}>
             <main style={{ backgroundColor: '#CDC4F9', height: '100vh' }}>
                 <Container fluid className='py-3'>
                     <Row>
@@ -48,10 +51,10 @@ export default function CustomerAgent() {
                                         </Col>
                                         <Col md={6} lg={7} xl={8}>
                                             <Container fluid className=''>
-                                                <Menu index={indexUser} />
+                                                <Menu />
                                                 <hr />
                                                 <div style={{ height: '78vh', overflowY: 'auto' }}>
-                                                    <Outlet index={indexUser} />
+                                                    <Outlet />
                                                 </div>
                                             </Container>
                                         </Col>

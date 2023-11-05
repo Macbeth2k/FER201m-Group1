@@ -1,13 +1,43 @@
-import ListGroup from 'react-bootstrap/ListGroup';
-import { Badge, Image } from 'react-bootstrap';
-import '../css/CA_SidebarItem.module.css';
-import { Link } from 'react-router-dom';
-export default function SideBarItem({user, index, changeIndex}) {
-    // console.log(JSON.stringify(index));
+import ListGroup from 'react-bootstrap/ListGroup'
+import { Badge, Image } from 'react-bootstrap'
+import '../css/CA_SidebarItem.module.css'
+import { Link, useLocation } from 'react-router-dom'
+import { useState, useContext, useEffect } from 'react'
+import { userContext } from '../layout/CustomerAgent'
+export default function SideBarItem({ user }) {
+    const { indexUser, setIndexHandler } = useContext(userContext)
+    const location = useLocation()
+    const [newPath, setNewPath] = useState('')
+    const [onHover, setOnHover] = useState(false)
+
+    useEffect(() => {
+        const currentPath = location.pathname
+        const [prefix, suffix] = currentPath.split(indexUser.id)
+        const updatedPath = `${user.id}${suffix}`
+        setNewPath(updatedPath)
+    }, [location.pathname])
+
+    const pointerHoverHandler = () => {
+        // console.log('hover' + user.id)
+        setOnHover(true)
+    }
+
+    const pointerNotHoverHandler = () => {
+        // console.log('not hover' + user.id)
+        setOnHover(false)
+    }
+
+    // console.log(onHover + ' ' + user.id)
+
     return (
         <ListGroup.Item className="p-2 border-bottom chat-item"
-        style={user.id === index.id ? {backgroundColor: 'rgba(0,0,0,0.1)'} : {}}>
-            <Link to={`${user.id}/messages`} className="d-flex justify-content-between" onClick={() => changeIndex(user)}>
+            style={{
+                ...onHover === true ? { backgroundColor: 'rgba(0,0,0,0.1)' } : {},
+                ...user.id === indexUser.id ? { backgroundColor: 'rgba(0,0,0,0.2)' } : {}
+            }}
+            onMouseOver={pointerHoverHandler} onMouseOut={pointerNotHoverHandler}
+        >
+            <Link to={newPath} className="d-flex justify-content-between" onClick={() => setIndexHandler(user)}>
                 <div className="d-flex flex-row">
                     <div>
                         <Image
@@ -16,12 +46,12 @@ export default function SideBarItem({user, index, changeIndex}) {
                             className="d-flex align-self-center me-3"
                             width="60"
                             height="60"
-                            style={{objectFit: 'fill', borderRadius: '50%'}}
+                            style={{ objectFit: 'fill', borderRadius: '50%' }}
                         />
                     </div>
                     <div className="pt-1">
                         <p className="fw-bold mb-0">{user.fname + ' ' + user.lname}</p>
-                        <p className="small text-muted">{}</p>
+                        <p className="small text-muted">{ }</p>
                     </div>
                 </div>
                 <div className="pt-1">
@@ -30,5 +60,5 @@ export default function SideBarItem({user, index, changeIndex}) {
                 </div>
             </Link>
         </ListGroup.Item>
-    );
+    )
 }

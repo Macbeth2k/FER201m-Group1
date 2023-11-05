@@ -1,6 +1,8 @@
 import { Container, Row, Col, Card } from 'react-bootstrap';
-
+import { useContext } from 'react'
+import { userContext } from '../../layout/CustomerAgent'; 
 export default function EditCustomerAccount() {
+    const {indexUser, setIndexHandler} = useContext(userContext)
     return (
         <section style={{ backgroundColor: '#f4f5f7' }}>
  
@@ -8,9 +10,9 @@ export default function EditCustomerAccount() {
                         <Card className="mb-3" style={{ borderRadius: '.5rem' }}>
                             <Row className="g-0">
                                 <Col md={4} className="gradient-custom text-center text-white" style={{ borderTopLeftRadius: '.5rem', borderBottomLeftRadius: '.5rem' }}>
-                                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp" alt="Avatar" className="img-fluid my-5" style={{ width: '80px' }} />
-                                    <h5>Marie Horwitz</h5>
-                                    <p>Web Designer</p>
+                                    <img src={indexUser.avatar} alt="Avatar" className="img-fluid my-5" style={{ width: '80px', height: '80px', objectFit: 'fill'}} />
+                                    <h5>{indexUser.fname + ' ' + indexUser.lname}</h5>
+                                    <p>{indexUser.role}</p>
                                     <i className="far fa-edit mb-5"></i>
                                 </Col>
                                 <Col md={8}>

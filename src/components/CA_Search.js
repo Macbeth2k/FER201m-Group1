@@ -10,7 +10,7 @@ export default function Search(props) {
             <InputGroup.Text className='border' id="search-addon">
                 <FontAwesomeIcon icon={faMagnifyingGlass} />
             </InputGroup.Text>
-            <FormControl className='rounded' type='search' aria-describedby='search-addon' placeholder='Search ...' onChange={e => props.listen(e.target.value)}/>
+            <FormControl className='rounded' type='search' aria-describedby='search-addon' placeholder={props.placeholder} onChange={e => props.listen(e.target.value)}/>
         </InputGroup>
     );
 }
