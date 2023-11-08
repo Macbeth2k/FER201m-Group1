@@ -305,14 +305,12 @@
       "role": "customer",
       "cart": [
         {
-          "productId": 1,
-          "quantity": 3
+          "productId": 2,
+          "quantity": 7
         }
       ],
       "orders": [
-        1,
-        2,
-        3
+        1
       ],
       "avatar": "https://i.imgur.com/9SRIArnh.jpg",
       "active": "normal",
@@ -418,6 +416,8 @@
       ],
       "avatar": "https://i.imgur.com/9SRIArnh.jpg",
       "active": "disabled",
+      "email": "email_6@gmail.com",
+      "password": "123",
       "address": [
         "đại học FPT, Thạch Hòa, Thạch Thất, Hà Nội"
       ]
@@ -969,22 +969,22 @@
   ],
   "new_products": [
     {
-      "id": 3
+      "id": 10
     },
     {
-      "id": 6
+      "id": 11
     },
     {
-      "id": 9
+      "id": 12
     },
     {
       "id": 13
     },
     {
-      "id": 16
+      "id": 14
     },
     {
-      "id": 19
+      "id": 15
     }
   ],
   "test": [

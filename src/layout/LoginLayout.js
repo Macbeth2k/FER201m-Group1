@@ -1,10 +1,12 @@
 import { Outlet } from "react-router-dom"
-
-export default function LoginLayout(){
+import Header from "../global/Header";
+import Footer from "../global/Footer"
+export default function LoginLayout() {
     return (
         <div>
-            Login Layout
+            <Header />
             <Outlet />
+            <Footer />
         </div>
     )
 }

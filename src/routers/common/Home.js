@@ -20,6 +20,9 @@ export default function Home() {
     const [products, setProducts] = useState([])
     const [categories, setCategories] = useState([])
     const [brands, setBrands] = useState([])
+    const [hot_products, setHot_products] = useState([])
+    const [new_products, setNew_products] = useState([])
+
 
     const instance = axios.create({
         baseURL: 'http://localhost:3004',
@@ -30,6 +33,29 @@ export default function Home() {
         instance.get('/products')
             .then(res => setProducts(res.data))
     }, [])
+
+    useEffect(() => {
+        instance.get('/hot_products')
+            .then(res => res.data)
+            .then(hotProducts => {
+                const filteredProducts = products.filter(product => {
+                    return hotProducts.some(hotProduct => hotProduct.id === product.id);
+                });
+                setHot_products(filteredProducts);
+            });
+    }, [products]);
+
+    useEffect(() => {
+        instance.get('/new_products')
+            .then(res => res.data)
+            .then(newProducts => {
+                const filteredProducts = products.filter(product => {
+                    return newProducts.some(newProduct => newProduct.id === product.id);
+                });
+                setNew_products(filteredProducts);
+            });
+    }, [products]);
+
     useEffect(() => {
         instance.get('/brands')
             .then(res => setBrands(res.data))
@@ -41,7 +67,7 @@ export default function Home() {
     }, [])
 
 
-    console.log(products)
+
     return (
         <>
             <div
@@ -154,6 +180,42 @@ export default function Home() {
                 </Row>
                 <Row className="my-5">
                     <Col>
+                        <div className="d-flex fs-1 fw-bold">Hot Badminton Rackets</div>
+                    </Col>
+                </Row>
+                <Row className="mb-5">
+                    <MDBRow className='row-cols-1 row-cols-md-3 g-4'>
+
+                        {
+                            hot_products.map((product) => {
+                                return (
+                                    <>
+                                        <MDBCol>
+                                            <MDBCard>
+                                                <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
+                                                    <MDBCardImage src={product.image} fluid alt='new product' />
+                                                    <a>
+                                                        <div className='mask' style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }}></div>
+                                                    </a>
+                                                </MDBRipple>
+                                                <MDBCardBody>
+                                                    <MDBCardTitle>{product.name}</MDBCardTitle>
+                                                    <MDBCardText>
+                                                        {product.description}
+                                                    </MDBCardText>
+                                                    <MDBBtn href='#'>Buy now</MDBBtn>
+                                                </MDBCardBody>
+                                            </MDBCard>
+                                        </MDBCol>
+                                    </>
+                                )
+                            })
+                        }
+
+                    </MDBRow>
+                </Row>
+                <Row className="my-5">
+                    <Col>
                         <div className="d-flex fs-1 fw-bold">New Badminton Rackets</div>
                     </Col>
                 </Row>
@@ -161,7 +223,7 @@ export default function Home() {
                     <MDBRow className='row-cols-1 row-cols-md-3 g-4'>
 
                         {
-                            products.map((product) => {
+                            new_products.map((product) => {
                                 return (
                                     <>
                                         <MDBCol>
