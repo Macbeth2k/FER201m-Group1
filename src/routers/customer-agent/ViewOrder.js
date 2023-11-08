@@ -47,7 +47,6 @@ export default function ViewOrder() {
 
     let rowCount = 0;
 
-    console.log(orderIdsFilter)
 
     return (
         <>
@@ -63,7 +62,7 @@ export default function ViewOrder() {
                     </tr>
                 </thead>
                 <tbody>
-                    {orderIdsFilter && orderIdsFilter.map((orderId, index) => {
+                    {orderIdsFilter && orderIdsFilter.map((orderId) => {
                         const order = orders.find((order) => order.id === orderId)
                         const products = order ? order.products.map(product => {
                             const index = smallProductData[product.productId]
@@ -83,7 +82,7 @@ export default function ViewOrder() {
                                         {products && products.map((product, i) => (
                                             product ? (
                                                 <span key={i}>
-                                                    {`${product.name}: ${product.quantity}`}
+                                                    {`${product.name}: ${product.quantity} cái`}
                                                     <br />
                                                 </span>
                                             ) : 'N/A'

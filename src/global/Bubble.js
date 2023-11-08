@@ -13,7 +13,7 @@ export default function Bubble(props){
               />
               <div>
                 <Alert className="p-2 ms-3 mb-1 rounded-3" variant="light" style={{marginRight: '80px'}}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  {props.content}
                 </Alert>
                 {/* <p className="small ms-3 mb-3 rounded-3 text-muted float-start">
                   12:00 PM | Aug 13
@@ -26,7 +26,7 @@ export default function Bubble(props){
             <>
               <div>
                 <Alert className="p-2 ms-3 mb-1 rounded-3" variant="light" style={{marginLeft: '80px'}}>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  {props.content}
                 </Alert>
                 {/* <p className="small ms-3 mb-3 rounded-3 text-muted float-end">
                   12:00 PM | Aug 13

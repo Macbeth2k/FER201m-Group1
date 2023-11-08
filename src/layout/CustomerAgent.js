@@ -18,8 +18,9 @@ export default function CustomerAgent() {
     const setIndexHandler = (value) => {
         setUser(value)
     }
+    // console.log(currentPath)
     useEffect(() => {
-        if (currentPath == '/customer-agent/') navigate('/customer-agent/1/messages')
+        if (currentPath == '/customer-agent' || currentPath == '/customer-agent/') navigate('/customer-agent/1/messages')
     }, []);
 
     return (
@@ -32,7 +33,7 @@ export default function CustomerAgent() {
                                 <Card.Body>
                                     <Row>
                                         <Col className='' md={6} lg={5} xl={4}>
-                                            <Sidebar index={indexUser} changeIndex={setIndexHandler} />
+                                            <Sidebar />
                                             <hr style={{ margin: 3 }} />
                                             <div>
                                                 <CA_Profile account={

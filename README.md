@@ -28,11 +28,11 @@ npm start
 Mở trình duyệt và ở [http://localhost:3000](http://localhost:3000) bạn sẽ thấy trang web đã hoạt động.
 
 ## Các đường dẫn
-- Customer: http://localhost:3000
-- Admin: http://localhost:3000/admin
-- Customer-agent: http://localhost:3000/customer-agent
-- Delivery-agent: http://localhost:3000/delivery-agent
-- Owner: http://localhost:3000/owner
+- Customer: [http://localhost:3000](http://localhost:3000)
+- Admin: [http://localhost:3000/admin](http://localhost:3000/admin)
+- Customer-agent: [http://localhost:3000/customer-agent](http://localhost:3000/customer-agent)
+- Delivery-agent: [http://localhost:3000/delivery-agent](http://localhost:3000/delivery-agent)
+- Owner: [http://localhost:3000/owner](http://localhost:3000/owner)
 
 ## Các thư viện sử dụng
 | Library | Source |

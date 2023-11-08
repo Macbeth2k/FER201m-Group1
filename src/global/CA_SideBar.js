@@ -2,17 +2,18 @@ import { useEffect, useState } from 'react';
 import Search from '../components/CA_Search';
 import SideBarItem from './CA_SideBarItem';
 import ListGroup from 'react-bootstrap/ListGroup';
-export default function Sidebar(props) {
+import { useContext } from 'react'
+import { userContext } from '../layout/CustomerAgent'
+export default function Sidebar() {
     const [users, setUsers] = useState([])
     const [search, setSearch] = useState('')
-    
+    const {indexUser, setIndexHandler} = useContext(userContext)
     useEffect(() => {
         fetch('http://localhost:3004/accounts')
             .then(response => response.json())
             .then(data => {
                 setUsers(data)
-                props.changeIndex(data[0])
-                
+                setIndexHandler({...data[0]})
             })
             .catch(err => console.log(err))
     }, [])
@@ -27,6 +28,7 @@ export default function Sidebar(props) {
 
     return (
         <div className='p-3' style={{paddingBottom: '0'}}>
+        {console.log('sidebar' + users)}
             <div className='me-3'>
                 <Search listen={searchHandler} placeholder='Search...'/>
             </div>

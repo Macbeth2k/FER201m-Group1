@@ -264,7 +264,6 @@ const router = createBrowserRouter(
         },
       ],
     },
-
   ],
 )
 
